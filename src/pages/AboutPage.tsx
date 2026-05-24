@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function AboutPage() {
   const skills = [
-    "React", "TypeScript", "Tailwind CSS", "Zustand", "Node.js", "Express", "Vite", "REST APIs"
+    "React", "TypeScript", "Tailwind CSS", "Zustand", "Node.js", "Express", "REST APIs", "Git", "Github", "MongoDB", "MySQL", "Full Stack Development"
   ];
 
   return (
@@ -49,7 +49,7 @@ export default function AboutPage() {
               <div className="space-y-3 pt-4 border-t border-white/5">
                 <h3 className="text-sm font-semibold tracking-wider text-muted-foreground uppercase flex items-center gap-2 justify-center md:justify-start">
                   <Sparkles className="w-4 h-4 text-[var(--primary)]" />
-                  Tech Stack
+                  Tech Stack 
                 </h3>
                 <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                   {skills.map((skill) => (
@@ -66,14 +66,14 @@ export default function AboutPage() {
               {/* Contacts / Links */}
               <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start text-sm">
                 <a
-                  href="mailto:harshavardan@example.com"
+                  href="harsha1127achu@gmail.com"
                   className="flex items-center gap-2 text-muted-foreground hover:text-white transition-colors py-1 px-3 bg-white/[0.02] hover:bg-white/[0.06] rounded-xl border border-white/5"
                 >
                   <Mail className="w-4 h-4 text-[var(--primary)]" />
                   <span>Email</span>
                 </a>
                 <a
-                  href="https://example.com"
+                  href="https://personal-portfolio-omega-tan-95.vercel.app/"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-white transition-colors py-1 px-3 bg-white/[0.02] hover:bg-white/[0.06] rounded-xl border border-white/5"

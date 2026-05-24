@@ -30,6 +30,12 @@ const Navbar = () => {
         <Link to="/popular" className="text-white/90 hover:text-[var(--primary)] transition-colors">
           Popular
         </Link>
+        <Link to="/bookmarks" className="text-white/90 hover:text-[var(--primary)] transition-colors">
+          Bookmarks
+        </Link>
+        <Link to="/popular" className="text-white/90 hover:text-[var(--primary)] transition-colors">
+          Popular
+        </Link>
         <Link to="/about" className="text-white/90 hover:text-[var(--primary)] transition-colors">
           About Me
         </Link>
@@ -58,6 +64,9 @@ const Navbar = () => {
           </Link>
           <Link to="/popular" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-[var(--primary)] text-base font-medium py-1 transition-colors">
             Popular
+          </Link>
+          <Link to="/bookmarks" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-[var(--primary)] text-base font-medium py-1 transition-colors">
+            Bookmarks
           </Link>
           <Link to="/about" onClick={() => setIsOpen(false)} className="text-white/90 hover:text-[var(--primary)] text-base font-medium py-1 transition-colors">
             About Me

@@ -7,6 +7,7 @@ import TopRatedPage from './pages/TopRatedPage'
 import TVShowsPage from './pages/TVShowsPage'
 import PopularPage from './pages/PopularPage'
 import AboutPage from './pages/AboutPage'
+import BookmarkPage from './pages/BookMarkPage'
 import FooterBar from './components/Home/FooterBar'
 import { Toaster } from 'sonner'
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/tv-shows" element={<TVShowsPage />} />
           <Route path="/popular" element={<PopularPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/bookmarks" element={<BookmarkPage />} />
         </Routes>
       </div>
       <FooterBar />
