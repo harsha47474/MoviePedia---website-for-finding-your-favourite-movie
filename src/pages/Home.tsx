@@ -1,12 +1,14 @@
 import background from "../assets/background.jpg";
 import SearchBar from "../components/Home/SearchBar";
-import FooterBar from "../components/Home/FooterBar";
 import { cn } from "@/lib/utils";
 import { useSearchStore } from "@/states/api";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Film, Tv, Sparkles, User } from "lucide-react";
 
 export default function Home() {
+  const navigate = useNavigate();
   const { fetchData, loading, movies } = useSearchStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [hasSearched, setHasSearched] = useState(false);
@@ -43,6 +45,43 @@ export default function Home() {
           )}
         >
           <SearchBar onSearch={handleClick} />
+
+          {!hasSearchContent && (
+            <div className="mt-12 w-full max-w-4xl px-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <h2 className="text-sm font-semibold tracking-wider text-muted-foreground uppercase mb-6 text-center">
+                Explore Categories
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  { title: "Top rated", icon: Film, route: "/top-rated", color: "text-amber-500 group-hover:text-amber-400" },
+                  { title: "TV Shows", icon: Tv, route: "/tv-shows", color: "text-sky-500 group-hover:text-sky-400" },
+                  { title: "Popular", icon: Sparkles, route: "/popular", color: "text-rose-500 group-hover:text-rose-400" },
+                  { title: "About", icon: User, route: "/about", color: "text-emerald-500 group-hover:text-emerald-400" },
+                ].map((category) => {
+                  const Icon = category.icon;
+                  return (
+                    <div
+                      key={category.title}
+                      onClick={() => navigate(category.route)}
+                      className={cn(
+                        "group cursor-pointer flex flex-col items-center justify-center p-6 rounded-2xl",
+                        "bg-white/[0.03] border border-white/5 backdrop-blur-md",
+                        "transition-all duration-300 ease-out hover:scale-105 hover:bg-white/[0.08] hover:border-white/20",
+                        "shadow-lg hover:shadow-2xl"
+                      )}
+                    >
+                      <div className="p-4 rounded-full bg-white/5 group-hover:bg-white/10 transition-colors mb-4">
+                        <Icon className={cn("w-8 h-8 transition-transform group-hover:scale-110 duration-300", category.color)} />
+                      </div>
+                      <span className="text-sm font-semibold tracking-wide text-white/95 group-hover:text-white transition-colors">
+                        {category.title}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
 
         {hasSearchContent && (
@@ -65,6 +104,7 @@ export default function Home() {
                   <Card 
                     key={movie.id} 
                     className="cursor-pointer border-none bg-card hover:bg-card/80 transition duration-300 hover:scale-105 rounded-none flex flex-col overflow-hidden h-full shadow-lg"
+                    onClick={()=>navigate(`/movie/${movie.id}`)}
                   >
                     {movie.poster_path ? (
                       <img 
@@ -96,8 +136,6 @@ export default function Home() {
           </div>
         )}
       </div>
-
-      <FooterBar />
     </div>
   );
 }
