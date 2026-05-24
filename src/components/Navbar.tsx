@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"; // or Next.js Link if using Next
+import { Link } from "react-router-dom"; 
 import icon from '../assets/icon.svg'
 
 const Navbar = () => {

@@ -10,17 +10,17 @@ const FooterBar = () => {
           <p>MediaPedia©2026</p>
           <p>
             Developed By :{" "}
-            <span className="text-orange-500">N.Harshavardan</span>
+            <span className="text-[var(--primary)]">N.Harshavardan</span>
           </p>
         </div>
 
         <div className="flex flex-col items-center md:items-end mt-4 md:mt-0">
           <p className="text-sm mb-2">Follow Me</p>
           <div className="flex space-x-4 text-xl">
+            <X className="hover:text-[var(--primary)] cursor-pointer" />
+            <X className="hover:text-[var(--primary)] cursor-pointer" />
             <X className="hover:text-orange-500 cursor-pointer" />
-            <X className="hover:text-orange-500 cursor-pointer" />
-            <X className="hover:text-orange-500 cursor-pointer" />
-            <X className="hover:text-orange-500 cursor-pointer" />
+            <X className="hover:text-[var(--primary)] cursor-pointer" />
           </div>
         </div>
       </div>
