@@ -1,7 +1,17 @@
-# 🎬 Movie Explorer – React + Zustand + TMDB
+# 🎬 MoviePedia – Explore Movies and TVShows
 
 A responsive web application for exploring movies and TV shows using the **TMDB API**, built with **React, Zustand, TailwindCSS, and Shadcn UI**.  
-Features include search, detailed movie pages, bookmarking with persistence, and paginated grids for popular, top‑rated, and TV shows.
+Search and explore trending, popular or highest rated movies and tvshows across different genres.
+
+---
+
+## ✨ Technologies
+- `React`
+- `TypeScript - Type Safety`
+- `Zustand - State Management`
+- `TailwingCSS`
+- `ShadCN UI`
+- `TMDB API`
 
 ---
 
@@ -25,7 +35,7 @@ Features include search, detailed movie pages, bookmarking with persistence, and
 
 ---
 
-## 📄 Pages
+## 📄 Routes
 - `/` – Home (search + featured movies)
 - `/movie/:id` – Detailed movie/TV view
 - `/top-rated` – Top‑rated movies (paginated)
@@ -33,6 +43,17 @@ Features include search, detailed movie pages, bookmarking with persistence, and
 - `/popular` – Popular movies (paginated)
 - `/about` – Static bio + tech stack
 - `/bookmarks` – Bookmarked movies grid
+
+---
+
+## 📍 Running the Project
+1. Clone the repository to your local machine.
+2. Run `npm install` or `yarn` in the project directory to install required dependencies.
+3. Get your `TMDB API KEY` and `ACCESS TOKEN` from https://www.themoviedb.org/.
+4. Create a `.env` file and create variables `VITE_API_KEY`, `VITE_READ_ACCESS_API`, `VITE_BASE_URL`.
+5. Run `npm run start` or `yarn start` to get the project started.
+6. Open http://localhost:5173/ (or the address shown in your console) in your web browser to view the app.
+
 
 ---
 
