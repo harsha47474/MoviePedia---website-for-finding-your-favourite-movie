@@ -54,6 +54,13 @@ Search and explore trending, popular or highest rated movies and tvshows across 
 5. Run `npm run start` or `yarn start` to get the project started.
 6. Open http://localhost:5173/ (or the address shown in your console) in your web browser to view the app.
 
+---
+
+## 🖼️ Screenshots
+<img width="1884" height="1019" alt="Image" src="https://github.com/user-attachments/assets/8d936b80-f41f-4d24-ba5c-cf0514291087" />
+<img width="1104" height="1028" alt="Image" src="https://github.com/user-attachments/assets/866a29e4-5bb7-4f41-ad6f-ba8418eddc49" />
+<img width="1897" height="1079" alt="Image" src="https://github.com/user-attachments/assets/bfade9ba-921b-4421-a4a1-6c0211012d38" />
+<img width="1896" height="1077" alt="Image" src="https://github.com/user-attachments/assets/ff41668d-3eb7-45d7-b9d6-6ac9e9eabe47" />
 
 ---
 
